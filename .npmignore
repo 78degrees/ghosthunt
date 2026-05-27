@@ -1,0 +1,5 @@
+src/
+*.ts
+!dist/**
+tsconfig.json
+.DS_Store

@@ -36,7 +36,7 @@ const HISTORY_FILES = [
 const CLI_PATTERNS = [
   {
     name: "Inline Password (mysql/psql)",
-    regex: /(?:-p|--password[= ])['"]?([^\s'"]{8,})['"]?/,
+    regex: /(?:mysql|psql|mysqldump|pg_dump|mariadb)\s+.*(?:-p(?=[^\s\-])['"]?([^\s'"]{8,})['"]?|--password[= ]['"]?([^\s'"]{8,})['"]?)/,
     severity: "high" as const,
   },
   {
